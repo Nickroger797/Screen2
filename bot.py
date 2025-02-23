@@ -60,34 +60,34 @@ def screenshot_video(file_path, max_frames=10):
 async def start(client, message):
     buttons = [
         [
-            InlineKeyboardButton("📣 Join my channel 📣", url="https://t.me/NT_BOT_CHANNEL"),
-            InlineKeyboardButton("👥 Support group 👥", url="https://t.me/NT_BOTS_SUPPORT"),
+            InlineKeyboardButton("🪄 Join my channel 🪄", url="https://t.me/codexbotmaker"),
+            InlineKeyboardButton("🧧 Support group 🧧", url="https://t.me/codexdisscus"),
         ],
         [
-            InlineKeyboardButton("👩‍💻 Developer 👩‍💻", url="https://t.me/LISA_FAN_LK"),
-            InlineKeyboardButton("⛔️ Cancel ⛔️", callback_data="cancel"),
+            InlineKeyboardButton("🫧 Developer 🫧", url="https://t.me/Codexownerr"),
+            InlineKeyboardButton("💀 Cancel 💀", callback_data="cancel"),
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await message.reply_text("Hello! I am your screenshot bot. Send me a document or video file, and I will generate screenshots for you.", reply_markup=reply_markup)
+    await message.reply_text("👋!\n\n👀I am your screenshot bot.\n\n👻Send me a document or video file, and I will generate screenshots for you.", reply_markup=reply_markup)
 
 # Handler for the /help command
 @app.on_message(filters.command("help"))
 async def help(client, message):
     await message.reply_text("Usage:\n\n"
-                             "1. Send a document (PDF, DOC, DOCX) to get screenshots of its pages.\n"
-                             "2. Send a video file (MP4, WEBM, MKV, AVI, MOV, WMV) to get screenshots from the video.\n"
-                             "3. I will process the file and upload the screenshots for you.")
+                             "1.🌊 Send a document (PDF, DOC, DOCX) to get screenshots of its pages.\n\n"
+                             "2.💀 Send a video file (MP4, WEBM, MKV, AVI, MOV, WMV) to get screenshots from the video.\n\n"
+                             "3.🪄 I will process the file and upload the screenshots for you.")
 
 # Handler for file messages
 @app.on_message(filters.document | filters.video)
 async def file_handler(client, message):
     file = message.document or message.video
-    reply_message = await message.reply_text("Downloading file...")
+    reply_message = await message.reply_text("🫧Downloading file...")
     file_path = await app.download_media(file)
     
     if not file_path:
-        await message.reply_text("Failed to download the file.")
+        await message.reply_text("🏮Failed to download the file.")
         return
     
     mime_type, _ = mimetypes.guess_type(file_path)
@@ -107,14 +107,14 @@ async def file_handler(client, message):
     os.remove(file_path)
 
     if screenshots:
-        await reply_message.edit_text("Uploading screenshots...")
+        await reply_message.edit_text("💠Uploading screenshots...")
         for screenshot_path in screenshots:
             await app.send_photo(chat_id=message.chat.id, photo=screenshot_path)
             os.remove(screenshot_path)
         await reply_message.delete()
         await message.delete()
     else:
-        await reply_message.edit_text("Failed to process the file.")
+        await reply_message.edit_text("🙄Failed to process the file.")
 
 @app.on_callback_query(filters.regex("cancel"))
 async def cancel(client, callback_query):
