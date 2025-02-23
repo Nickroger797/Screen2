@@ -121,7 +121,12 @@ async def cancel(client, callback_query):
     await callback_query.message.delete()
 
 # Run the bot
-# Run the bot
-if __name__ == "__main__":
-    from waitress import serve
+import threading
+from waitress import serve
+
+def run_web():
     serve(app, host="0.0.0.0", port=8080)
+
+if __name__ == "__main__":
+    threading.Thread(target=run_web).start()
+    app.run()
