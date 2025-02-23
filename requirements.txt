@@ -1,0 +1,5 @@
+pyrofork
+pymupdf
+opencv-python-headless
+tgcrypto
+numpy<2
