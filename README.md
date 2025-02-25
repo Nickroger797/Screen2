@@ -29,8 +29,8 @@ help - How To Use The Bot 🆘
 ### My Community Details
 
 
-- YouTube Channel : [Telegram Bots 🤖](https://youtube.com/@NTBOT?feature=shared)
-- Telegram Channel : [NT Bots ❤️‍🩹](https://t.me/NT_BOT_CHANNEL)
-- Telegram Group : [NT Bots Support 🎗️](https://t.me/NT_BOTS_SUPPORT)
-- URL Uploader Bot : [Uploader Bot 🚀](https://t.me/UploadLinkToFileBot)
-- Me : [Lisa 👑](https://t.me/LISA_FAN_LK)
+- Bots Channel : [Telegram Bots 🤖](https://t.me/codexbotmaker)
+- movie Channel : [Codex Bots ❤️‍🩹](https://t.me/codexmoviehere)
+- support Group : [Codex Support 🎗️](https://t.me/codexdisscus)
+- Movies Group : [Movies Group 🚀](https://t.me/codexmoviesgroup)
+- Me : [Codex 👑](https://t.me/Codexownerr)
